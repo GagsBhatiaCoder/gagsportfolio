@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap');
+
+body{
+  font-family: 'Roboto Slab', serif;
+}
+.blog-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 1rem;
+}
+/* BlogPost Css Starts here */
+.blog-post {
+  padding: 1rem;
+}
+.blog-icon-box {
+  display: flex;
+  justify-content: space-between;
+}
+.blog-icon {
+  padding: 0 0.5rem;
+}
+.read-more-btn {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  white-space: nowrap;
+  background-color: rgb(11, 163, 11);
+  border-radius: 5px;
+}
+.read-more-btn:hover {
+  background-color: rgba(11, 163, 11, 0.774);
+}
+.blog-post:hover {
+  box-shadow: 0 0 23px 4px #e0dfdf;
+}
+/* BlogPost css ends here */
+/* FullArtical Css starts here */
+.fullartical{
+  padding: 1rem;
+}
+.fullartical-img-box{
+  width: 50%;
+  margin: 1rem auto auto;
+}
+
+@media (max-width: 750px){
+  .blog-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .fullartical-img-box{
+    width: 80%;
+  }
+}
+@media(max-width:300px){
+.blog-title{
+  font-size: 1.5rem;
+}
+.blog-icon, .fullartical-span, .fullartical-content{
+font-size: .8rem;
+}
+.fullartical-img-box{
+  width: 100%;
+}
+}
