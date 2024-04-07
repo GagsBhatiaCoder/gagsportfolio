@@ -7,6 +7,7 @@ import AboutMe from '../Components/AboutMe'
 import Blog from '../Blog/Blog'
 import FloatWatsappBtn from '../Components/FloatWatsappBtn'
 import { useLocation } from 'react-router-dom'
+import PortFolio from '../Components/PortFolio'
 
 
 
@@ -25,6 +26,7 @@ export default function Home() {
       <AboutMe />
       <OurServices />
       <Blog />
+      <PortFolio />
       <Footer />
      </ >
   )

@@ -7,7 +7,7 @@ const Blog = () => {
     return (
         <>
             <div className='py-3' style={{background:"#fff"}} id='blog'>
-                <h2 className='blog-title text-center' >Latest Story From Our Blogs</h2>
+                <h2 className='service-title' >Latest Story From Our Blogs</h2>
                 <div className="blog-container">
                     {blogPosts.map((post) => (
                         <BlogPosts key={post.id} {...post} />

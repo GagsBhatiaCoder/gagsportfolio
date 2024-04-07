@@ -36,3 +36,9 @@ body {
         #b6fffa
       );
 }
+
+/* css for portfolio */
+.portfolio-container{
+  width: 200px;
+  height: auto;
+}
