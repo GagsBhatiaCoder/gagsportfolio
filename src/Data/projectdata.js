@@ -4,11 +4,12 @@ import Legal from "../assets/legal.jpg";
 import Utility from "../assets/utility.jpg";
 import Account from "../assets/Account.jpg";
 import Todo from "../assets/to-do.jpg";
+import Pest from "../assets/footer_pest_control-800x800.jpg"
 
 const projectData = [
   {
     id: 1,
-    title: "E-commerce",
+    title: "E-commerce Store",
     img: Ecom,
     category: "Ecom",
     link:"https://gagsecom.netlify.app/"
@@ -47,6 +48,13 @@ const projectData = [
     img: Todo,
     category:"Apps",
     link:"https://gagsbhatiacoder.github.io/Todo-List-App/"
+  },
+  {
+    id: 7,
+    title: "Pest Control",
+    img: Pest,
+    category:"Static",
+    link:"https://ipcspestcontrol.in"
   }
 ];
 

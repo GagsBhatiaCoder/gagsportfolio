@@ -21,7 +21,7 @@ function PortFolio() {
             ))}
             </div>
 
-            <div className='container'>
+            <div className='container mb-5'>
                 <div className='row justify-content-center'>
                     {projectData.filter(project => !selectedCategory || project.category === selectedCategory).map(product => (
                         <Link key={product.id} to={product.link} target='_blank' 
