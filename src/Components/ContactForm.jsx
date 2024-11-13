@@ -1,9 +1,9 @@
 import React, { useRef, useState } from 'react'
-import Navbar from './Navbar'
 import Footer from './Footer'
 import { Link, useNavigate } from 'react-router-dom'
 import FloatWatsappBtn from './FloatWatsappBtn'
 import { FadeLoader } from 'react-spinners'
+import Nav2 from './Nav2'
 
 export default function ContactForm() {
     const [loading, setLoading] = useState(false)
@@ -16,7 +16,7 @@ export default function ContactForm() {
     const formRef = useRef(null);
     document.title = "PortFolio Website || Contact"
     const scriptUrl = "https://script.google.com/macros/s/AKfycbzOD1JjkWNb1NsIY7nlLetmZF9iD8DsvXoUGwjx7eQPPC2rOWJ6X9pcc4XaGc1IPH1U/exec"
-  
+
     const handleSubmit = (e) => {
         e.preventDefault()
         setLoading(true)
@@ -57,15 +57,15 @@ export default function ContactForm() {
 
     return (
         <>
-       
-            <Navbar />
-            {loading && (<div className='loader' style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(255, 255, 255, 0.8)", zIndex: 1000}}><FadeLoader
-      color={"#000"}
-      loading={loading}
-      size={100}
-      aria-label="Loading Spinner"
-      data-testid="loader"
-    /> </div>)}
+
+            <Nav2 />
+            {loading && (<div className='loader' style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(255, 255, 255, 0.8)", zIndex: 1000 }}><FadeLoader
+                color={"#000"}
+                loading={loading}
+                size={100}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+            /> </div>)}
             <FloatWatsappBtn />
             <div className='contact-container'>
                 <div className='contact-details'>
@@ -89,20 +89,20 @@ export default function ContactForm() {
                     <form onSubmit={handleSubmit} ref={formRef} name='portfolio-data'>
                         <input className='form-input' type="text" value={name} placeholder='Name*'
                             name='name' onChange={handleChange} required /> <br />
-                        <input className='form-input' type="mail" value={email} placeholder='Email*' 
-                        name='email'  onChange={handleChange} required /> <br />
+                        <input className='form-input' type="mail" value={email} placeholder='Email*'
+                            name='email' onChange={handleChange} required /> <br />
                         <input className='form-input' type="text" maxLength={10} pattern="\d{10}" placeholder='Number*'
-                         name='number' value={number} onChange={handleChange} required /> <br />
+                            name='number' value={number} onChange={handleChange} required /> <br />
                         <textarea className='form-input' name="message" id="" cols="20" rows="5"
-                         placeholder='Message' value={message} onChange={handleChange}></textarea> <br />
-                         <div className='d-flex justify-content-center'>
-                         <button className='btn btn-outline-dark' type='submit'> Submit </button>
-                         </div>
-                        
+                            placeholder='Message' value={message} onChange={handleChange}></textarea> <br />
+                        <div className='d-flex justify-content-center'>
+                            <button className='btn btn-outline-dark' type='submit'> Submit </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
-            <Footer /> 
+            <Footer />
         </>
     )
 }
