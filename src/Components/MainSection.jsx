@@ -7,14 +7,14 @@ import SocialMediaProfile from './SocialMediaProfile'
 export default function MainSection() {
   return (
     <div className="p-4 " >
-      <section className="container d-md-flex p-4 rounded ">
+      <section className="container d-md-flex p-0 p-md-4 rounded ">
 
-        <div className='d-flex justify-content-center'>
+        <div className='d-flex justify-content-center author-img-box'>
           <img src={Gagan} alt="author_image" className="author-img rounded" />
         </div>
         <div className="author-info slide-in-right text-light d-flex flex-column justify-content-center">
           <p className="title-info mb-3">Hello Everyone I am</p>
-          <div class="container p-0">
+          <div class="">
             <div class="box">
 
               <div class="title">
@@ -24,7 +24,7 @@ export default function MainSection() {
 
               <div class="role">
                 <div class="block"></div>
-                <p className='mt-3 mb-3'>Frontend Developer</p>
+                <p>Frontend Developer</p>
               </div>
 
             </div>
