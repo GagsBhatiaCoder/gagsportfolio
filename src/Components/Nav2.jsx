@@ -27,7 +27,7 @@ function Nav2() {
                     <li><a href="/#skills">Skills</a></li>
                     <li><a href="/#experience"> Experiance </a></li>
                     <li><a href="/#projects">Projects</a></li>
-                    <li><a href="/">Education</a></li>
+                    <li><a href="/#education">Education</a></li>
                     <li><a href="/">Blog</a></li>
                 </ul>
             </nav>

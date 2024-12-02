@@ -8,6 +8,7 @@ import PortFolio from '../Components/PortFolio'
 import Skills from '../Components/Skills'
 import Experience from '../Components/Experience'
 import Nav2 from '../Components/Nav2'
+import Education from '../Components/Education'
 
 
 
@@ -27,6 +28,7 @@ export default function Home() {
       <Experience />
       {/* <Blog /> */}
       <PortFolio />
+      <Education />
       <Footer />
     </ >
   )
