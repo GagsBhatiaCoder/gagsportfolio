@@ -15,21 +15,6 @@
 }
 
 body {
-  /* background-image: linear-gradient(
-    to left bottom,
-    #1d24ca,
-    #0056e5,
-    #007cf5,
-    #009efb,
-    #25bdfd,
-    #54cdfd,
-    #79dcfd,
-    #9cebfe,
-    #a1f0fd,
-    #a7f5fc,
-    #aefafb,
-    #b6fffa
-  ); */
   background: rgb(4, 10, 25);
   background: linear-gradient(
     96deg,

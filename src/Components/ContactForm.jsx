@@ -1,9 +1,5 @@
 import React, { useRef, useState } from 'react'
-import Footer from './Footer'
-import { Link, useNavigate } from 'react-router-dom'
-import FloatWatsappBtn from './FloatWatsappBtn'
-import { FadeLoader } from 'react-spinners'
-import Nav2 from './Nav2'
+import { Link } from 'react-router-dom'
 
 export default function ContactForm() {
     const [loading, setLoading] = useState(false)
@@ -11,8 +7,8 @@ export default function ContactForm() {
     const [email, setEmail] = useState('')
     const [number, setNumber] = useState('')
     const [message, setMessage] = useState('')
+    const [successMessage, setSuccessMessage] = useState("")
 
-    const navigate = useNavigate()
     const formRef = useRef(null);
     document.title = "PortFolio Website || Contact"
     const scriptUrl = "https://script.google.com/macros/s/AKfycbzOD1JjkWNb1NsIY7nlLetmZF9iD8DsvXoUGwjx7eQPPC2rOWJ6X9pcc4XaGc1IPH1U/exec"
@@ -20,14 +16,15 @@ export default function ContactForm() {
     const handleSubmit = (e) => {
         e.preventDefault()
         setLoading(true)
+        setSuccessMessage(''); // Clear any previous success message
+
         fetch(scriptUrl, { method: 'POST', body: new FormData(formRef.current) })
             .then(res => {
-                alert("SUCCESSFULLY SUBMITTED");
+                setSuccessMessage("Form submitted successfully!")
                 setName('');
                 setEmail('')
                 setNumber('')
                 setMessage('')
-                navigate('/contact')
                 setLoading(false)
 
 
@@ -57,22 +54,12 @@ export default function ContactForm() {
 
     return (
         <>
-
-            <Nav2 />
-            {loading && (<div className='loader' style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "rgba(255, 255, 255, 0.8)", zIndex: 1000 }}><FadeLoader
-                color={"#000"}
-                loading={loading}
-                size={100}
-                aria-label="Loading Spinner"
-                data-testid="loader"
-            /> </div>)}
-            <FloatWatsappBtn />
-            <div className='contact-container'>
+            <div className='contact-container' id='contact'>
                 <div className='contact-details'>
                     <h4 className='form-title text-light mb-1'>Lets get in touch</h4>
-                    <p className='text-light'>We are open for any suggestion <br />or just to have a chat...</p>
+                    <p className='form-subtitle mb-5'>We are open for any suggestion <br />or just to have a chat...</p>
                     <div>
-                        <Link to="https://maps.app.goo.gl/qZZwnYHSDLvnSvPX6" className='form-links' target='_blank'><i className="fa-solid fa-location-dot form-icon" style={{ padding: "9px 12px" }}></i> C-19 Shahdana Colony Bareilly, Uttar Pradesh</Link>
+                        <Link to="https://maps.app.goo.gl/qZZwnYHSDLvnSvPX6" className='form-links' target='_blank'><i className="fa-solid fa-location-dot form-icon" style={{ padding: "9px 12px" }}></i>Bareilly, Uttar Pradesh</Link>
                     </div>
                     <div>
                         <Link to="tel:+918979266475" className='form-links'><i className="fa-solid fa-phone form-icon"></i>+918979266475</Link>
@@ -96,13 +83,35 @@ export default function ContactForm() {
                         <textarea className='form-input' name="message" id="" cols="20" rows="5"
                             placeholder='Message' value={message} onChange={handleChange}></textarea> <br />
                         <div className='d-flex justify-content-center'>
-                            <button className='btn btn-outline-dark' type='submit'> Submit </button>
+                            <button
+                                className="btn submit-btn"
+                                type="submit"
+                                disabled={loading}
+                            >
+                                {loading ? (
+                                    <>
+                                        <span
+                                            className="spinner-border spinner-border-sm"
+                                            aria-hidden="true"
+                                        ></span>
+                                        <span role="status" style={{ marginLeft: '8px' }}>
+                                            Submitting...
+                                        </span>
+                                    </>
+                                ) : (
+                                    'Submit'
+                                )}
+                            </button>
                         </div>
+                        {successMessage && (
+                            <div className="mt-3 text-center success-msg" >
+                                {successMessage}
+                            </div>
+                        )}
 
                     </form>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }

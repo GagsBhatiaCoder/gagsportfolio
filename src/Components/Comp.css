@@ -659,7 +659,7 @@ nav ul li a {
   flex-direction: column;
   gap: 12px;
   transition: 0.3s ease-in-out;
-  border: 0.1px solid rgb(48, 110, 232);
+  border: 0.1px solid rgb(133, 76, 230);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 }
 .experience-box:hover {
@@ -696,19 +696,19 @@ nav ul li a {
 /* ========================================Project Section=============================================== */
 .btn-group .btn {
   color: #fff;
-  border: 0.1px solid rgb(48, 110, 232);
+  border: 0.1px solid rgb(133, 76, 230);
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 }
 
 .btn-group .btn.active {
-  background-color: rgba(74, 127, 234, 0.471);
+  background-color: rgba(132, 76, 230, 0.762);
   color: #fff; /* White text color */
 }
 /* ========================================Contact form css starts here================================== */
 
 .contact-container {
   display: flex;
-  background-color: #fff;
+  background-color: none;
   width: 80%;
   margin: 7rem auto;
   border-radius: 10px;
@@ -724,61 +724,55 @@ nav ul li a {
   font-size: 3rem;
   text-align: center;
 }
+.form-subtitle {
+  color: var(--secondary-font-color);
+  text-align: center;
+}
 .form-links {
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary-font-color);
 }
 .form-icon {
-  background-color: #fff;
+  background-color: var(--secondary-font-color);
   color: #000;
-  border: 1px solid #fff;
   border-radius: 30px;
   margin: 0 10px 10px 0;
+  padding: 10px;
 }
-.form-icon:hover {
-  background-image: linear-gradient(
-    to left bottom,
-    #1d24ca,
-    #0056e5,
-    #007cf5,
-    #009efb,
-    #25bdfd,
-    #54cdfd,
-    #79dcfd,
-    #9cebfe,
-    #a1f0fd,
-    #a7f5fc,
-    #aefafb,
-    #b6fffa
-  );
-}
+
 .form-input {
   border: none;
-  border-bottom: 1px solid #dbd6d6;
+  border: 0.1px solid rgb(133, 76, 230);
+  color: #fff;
+  border-radius: 5px;
   font-size: 1rem;
   margin-bottom: 0.5rem;
   outline: none;
   padding: 0.5rem;
   width: 100%;
+  background: none;
 }
 .contact-form {
   flex: 1;
   padding: 2rem;
 }
 
-.form-btn {
-  background-color: #5cce93;
-  font-size: 1rem;
-  border: none;
-  border-radius: 15px;
-  padding: 0.5rem 1rem;
+.submit-btn {
+  color: grey;
+  background: none;
+  border: 0.1px solid rgb(133, 76, 230);
 }
-.form-btn:hover {
-  background-color: #45cc86;
-  cursor: pointer;
+.submit-btn:hover {
+  border: 0.1px solid rgb(133, 76, 230);
+  background-color: rgb(133, 76, 230);
 }
+
 .loader {
   background: none;
+}
+
+.success-msg {
+  color: #fff;
 }
 
 /* ==============================Footer Css Starts Here========================= */
@@ -935,7 +929,12 @@ nav ul li a {
   }
 
   .form-title {
-    font-size: 2rem;
+    font-size: 24px;
+  }
+  .form-subtitle,
+  .submit-btn,
+  .form-input {
+    font-size: 10px;
   }
   .form-icon,
   .form-links {
