@@ -72,7 +72,7 @@ export default function ContactForm() {
                     </div>
                 </div>
                 <div className='contact-form'>
-                    <h4 className='form-title'>Contact Us</h4>
+                    <h4 className='form-title'>Contact Me</h4>
                     <form onSubmit={handleSubmit} ref={formRef} name='portfolio-data'>
                         <input className='form-input' type="text" value={name} placeholder='Name*'
                             name='name' onChange={handleChange} required /> <br />

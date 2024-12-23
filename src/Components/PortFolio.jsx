@@ -35,7 +35,7 @@ function PortFolio() {
 
 
             <div className='container mb-5'>
-                <div className='row justify-content-center'>
+                {/* <div className='row justify-content-center'>
                     {projectData.filter(project => !selectedCategory || project.category === selectedCategory).map(product => (
                         <Link key={product.id} to={product.link} target='_blank'
                             className=' col-md-3 p-3 bg-light m-2 rounded text-dark text-decoration-none' >
@@ -45,8 +45,32 @@ function PortFolio() {
 
 
                     ))}
+
+                </div> */}
+                <div className="row justify-content-center">
+                    {projectData.filter(project => !selectedCategory || project.category === selectedCategory).map(product => (
+                        <Link className='card me-3 mb-3' key={product.id} to={product.link}>
+                            <div className="image_container">
+                                <img className='mb-2' src={product.img} alt={product.title} style={{ width: "100%" }} />
+                            </div>
+                            <div className="title">
+                                <h4 className='text-decoration-none text-light'>{product.title}</h4>
+                            </div>
+                            {/* <div className='skill-set'>
+                                <span>React</span>
+                                <span>React</span>
+                                <span>React</span>
+                            </div> */}
+                            <div className='portfolio-description'>
+
+                            </div>
+
+                        </Link>
+                    ))}
                 </div>
             </div>
+
+
         </div>
     )
 }
