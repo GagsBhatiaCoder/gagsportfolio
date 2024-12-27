@@ -728,6 +728,17 @@ nav ul li a {
   border-radius: 1rem;
 }
 
+.project-card {
+  background-color: #191924;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 12px 24px -4px;
+  transform: translateY(-10px) scale(1.05);
+}
+
 .image_container {
   overflow: hidden;
   cursor: pointer;
@@ -752,7 +763,7 @@ nav ul li a {
   fill: var(--light);
 }
 
-.title {
+.project-title {
   overflow: clip;
 
   width: 100%;
@@ -763,6 +774,22 @@ nav ul li a {
   text-transform: capitalize;
   text-wrap: nowrap;
   text-overflow: ellipsis;
+}
+.pro-skills {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+.skill-name {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgb(133, 76, 230);
+  background-color: rgba(133, 76, 230, 0.082);
+  padding: 2px 8px;
+  border-radius: 10px;
 }
 .skill-set {
   width: 100%;

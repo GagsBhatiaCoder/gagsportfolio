@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 function PortFolio() {
     const [selectedCategory, setSelectedCategory] = useState(null);
-
     const categories = [...new Set(projectData.map(project => project.category))]
 
     return (
@@ -49,18 +48,28 @@ function PortFolio() {
                 </div> */}
                 <div className="row justify-content-center">
                     {projectData.filter(project => !selectedCategory || project.category === selectedCategory).map(product => (
-                        <Link className='card me-3 mb-3' key={product.id} to={product.link}>
+                        <Link className='card project-card me-3 mb-3' key={product.id} to={product.link}>
                             <div className="image_container">
                                 <img className='mb-2' src={product.img} alt={product.title} style={{ width: "100%" }} />
                             </div>
-                            <div className="title">
-                                <h4 className='text-decoration-none text-light'>{product.title}</h4>
+                            <div className="project-title">
+                                <h6 className='text-decoration-none text-light'>{product.title}</h6>
                             </div>
                             {/* <div className='skill-set'>
                                 <span>React</span>
                                 <span>React</span>
                                 <span>React</span>
                             </div> */}
+
+
+                            <div className="pro-skills">
+                                <span className="skill-name">React</span>
+                                <span className="skill-name">HTML </span>
+                                <span className="skill-name">CSS</span>
+                                <span className="skill-name">JavaScript</span>
+                                <span className="skill-name">Bootstrap</span>
+                                <span className="skill-name">Maaterial UI</span>
+                            </div>
                             <div className='portfolio-description'>
 
                             </div>

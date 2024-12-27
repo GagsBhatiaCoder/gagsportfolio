@@ -9,7 +9,7 @@ import Skills from '../Components/Skills'
 import Experience from '../Components/Experience'
 import Nav2 from '../Components/Nav2'
 import Education from '../Components/Education'
-import ContactForm from '../Components/ContactForm'
+import ContactForm from '../Components/ContactForm';
 
 
 

@@ -48,6 +48,7 @@ const projectData = [
     title: "Landing Page",
     img: Account,
     category: "UX/UI",
+    skills: ["Html", "CSS", "Bootstrap", "JavaScript"],
     descrption:
       "Crafting visually stunning and responsive interfaces, this UI project leverages the power of HTML and CSS4 to deliver an engaging user experience. Designed with a focus on modern web aesthetics, it ensures seamless navigation and adaptability across all devices.",
     link: "https://accountantcouncil.netlify.app/",
